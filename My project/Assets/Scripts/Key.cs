@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
+    public AudioSource keySound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,13 @@ public class Key : MonoBehaviour
     {
         
     }
-}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("obtained key");
+        keySound.Play();
+        Destroy(this.gameObject); 
+    }
+        
+ }
  
