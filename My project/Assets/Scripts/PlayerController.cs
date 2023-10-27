@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; //importing SceneManagement library
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = .01f;
+    public float speed = .001f;
     public bool hasKey = false;
 
     public GameObject key;
 
     public static PlayerController instance;
 
+    
     // Start is called before the first frame update
     void Start()
+
     {
+       
+
         if(instance != null)
         {
             Destroy(gameObject);
@@ -56,7 +61,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("door")) 
         {
             Debug.Log("hit");
-            //SceneManager.LoadScene(0); 
+            SceneManager.LoadScene(2); 
             
         }
 
@@ -65,10 +70,17 @@ public class PlayerController : MonoBehaviour
             Debug.Log("obtained key");
             hasKey = true;
         }
-        if (collision.gameObject.tag.Equals("end") && hasKey == true)
+        if (collision.gameObject.tag.Equals("exit"))
         {
             Debug.Log("hit");
-            //SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
+        }
+
+        if (collision.gameObject.tag.Equals("end") && hasKey == true)
+        { 
+            Debug.Log("hit");
+            SceneManager.LoadScene(3);
+        
         }
 
         if (collision.gameObject.tag.Equals(GetComponent<Collider>())) 
