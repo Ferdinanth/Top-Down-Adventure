@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("door")) 
         {
             Debug.Log("hit");
-            SceneManager.LoadScene(2); 
+            SceneManager.LoadScene(1); 
             
         }
 
@@ -73,13 +73,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("exit"))
         {
             Debug.Log("hit");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
 
         if (collision.gameObject.tag.Equals("end") && hasKey == true)
         { 
             Debug.Log("hit");
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         
         }
 
