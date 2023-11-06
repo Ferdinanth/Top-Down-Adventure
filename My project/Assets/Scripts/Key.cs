@@ -25,7 +25,7 @@ public class Key : MonoBehaviour
         {
             Debug.Log("obtained key");
             keySound.Play();
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, keySound.clip.length);
         }
 
     }

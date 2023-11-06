@@ -4861,7 +4861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.001
-  hasKey: 1
+  hasKey: 0
   key: {fileID: 0}
 --- !u!50 &1515870624
 Rigidbody2D:
@@ -8603,7 +8603,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 11128b38c61415a47a53cd8ed1579441, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -8700,7 +8700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fed84fea2d666459c93fdb7886d32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keySound: {fileID: 0}
+  keySound: {fileID: 1618579746}
 --- !u!212 &1618579750
 SpriteRenderer:
   m_ObjectHideFlags: 0
