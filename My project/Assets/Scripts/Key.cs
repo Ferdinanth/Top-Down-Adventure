@@ -21,10 +21,14 @@ public class Key : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("obtained key");
-        keySound.Play();
-        Destroy(this.gameObject); 
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Debug.Log("obtained key");
+            keySound.Play();
+            Destroy(this.gameObject);
+        }
+
     }
-        
+    
  }
  
